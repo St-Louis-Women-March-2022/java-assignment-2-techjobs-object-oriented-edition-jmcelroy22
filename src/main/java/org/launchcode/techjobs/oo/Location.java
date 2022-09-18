@@ -8,7 +8,8 @@ public class Location {
     private static int nextId = 1;
     private String value;
 
-    public Location() {
+    public Location()
+    {
         id = nextId;
         nextId++;
     }

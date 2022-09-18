@@ -22,6 +22,7 @@ public class CoreCompetency {
 
     @Override
     public String toString() {
+
         return value;
     }
 

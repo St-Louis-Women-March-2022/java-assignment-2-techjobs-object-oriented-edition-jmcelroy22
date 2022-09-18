@@ -20,6 +20,7 @@ public class Job {
     public Job() {
         this.id = id;
     }
+
     public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
         this.name = name;
         this.employer = employer;
