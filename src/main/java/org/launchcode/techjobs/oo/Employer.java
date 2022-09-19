@@ -47,7 +47,6 @@ public class Employer {
     // Getters and Setters:
 
     public int getId() {
-
         return id;
     }
 

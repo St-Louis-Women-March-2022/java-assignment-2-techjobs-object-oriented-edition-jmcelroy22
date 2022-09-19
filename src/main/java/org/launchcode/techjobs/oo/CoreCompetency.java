@@ -35,6 +35,7 @@ public class CoreCompetency {
 
     @Override
     public int hashCode() {
+
         return Objects.hash(id);
     }
 
