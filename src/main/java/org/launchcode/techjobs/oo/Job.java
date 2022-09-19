@@ -18,6 +18,7 @@ public class Job {
     //  the 'id' field.
 
     public Job() {
+
         this.id = id;
     }
 
