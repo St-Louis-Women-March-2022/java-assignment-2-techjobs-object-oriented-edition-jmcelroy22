@@ -5,19 +5,18 @@ import java.util.Objects;
 public class Employer {
 
     private int id;
-
     private static int nextId = 1;
     private String value;
 
-    //a constructor that accepts no arguments and assigns the value of nextId to the id field. It then increments the
+    //a constructor that accepts no arguments and assigns the value of nextId to the ID field. It then increments the
     //nextId. Thus, every new Employer object will get a different ID number.
     public Employer() {
         id = nextId;
         nextId++;
     }
-    //This constructor assigns aValue to the value field. However, it ALSO initializes id for the object by calling the
-    //first constructor with the this(); statement. Including this(): in any Employer constructor makes initializing
-    //id a default behavior.
+    //This constructor assigns aValue to the value field. However, it ALSO initializes ID for the object by calling the
+    //first constructor with the this(); statement. Including this(); in any Employer constructor makes initializing
+    //ID a default behavior.
     public Employer(String value) {
         this();
         this.value = value;
@@ -41,20 +40,24 @@ public class Employer {
 
     @Override
     public int hashCode() {
+
         return Objects.hash(getId());
     }
 
     // Getters and Setters:
 
     public int getId() {
+
         return id;
     }
 
     public String getValue() {
+
         return value;
     }
 
     public void setValue(String value) {
+
         this.value = value;
     }
 
