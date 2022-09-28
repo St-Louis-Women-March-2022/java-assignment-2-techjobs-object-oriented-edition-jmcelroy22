@@ -84,12 +84,25 @@ public class Job {
         return id;
     }
 
+    public String toString(){
+        String s = "\n";
+        s += "ID: " + id +"\n";
+        s += "Name: " + name +"\n";
+        s += "Employer: " + employer + "\n";
+        s += "Location: " + location + "\n";
+        s += "Position Type: " + positionType + "\n";
+        s += "Core Competency: " + coreCompetency + "\n";
+        s += "\n";
+        return s;
+    }
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Job job = (Job) o;
-        return Objects.equals(employer, job.employer) && Objects.equals(positionType, job.positionType) && Objects.equals(coreCompetency, job.coreCompetency);
+        return this.id==job.id;
     }
 
     @Override
