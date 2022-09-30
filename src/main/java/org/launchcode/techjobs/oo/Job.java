@@ -87,14 +87,40 @@ public class Job {
     public String toString(){
         String s = "\n";
         s += "ID: " + id +"\n";
-        s += "Name: " + name +"\n";
-        s += "Employer: " + employer + "\n";
-        s += "Location: " + location + "\n";
-        s += "Position Type: " + positionType + "\n";
-        s += "Core Competency: " + coreCompetency + "\n";
+        if (name==null || name.equals("")){
+            s += "Name: Data not available\n";
+        } else {
+            s += "Name: " + name +"\n";
+        }
+        if (employer==null || employer.getValue().equals("")){
+            s += "Employer: Data not available\n";
+        } else {
+            s += "Employer: " + employer + "\n";
+        }
+        if (location==null || location.getValue().equals("")){
+            s += "Location: Data not available\n";
+        } else {
+            s += "Location: " + location + "\n";
+
+        }
+        if (positionType==null || positionType.getValue().equals("")){
+            s += "Position Type: Data not available\n";
+        } else {
+            s += "Position Type: " + positionType + "\n";
+
+        }
+        if (coreCompetency==null || coreCompetency.getValue().equals("")){
+            s += "Core Competency: Data not available\n";
+        } else {
+            s += "Core Competency: " + coreCompetency + "\n";
+
+        }
         s += "\n";
         return s;
     }
+
+
+
 
 
     @Override
