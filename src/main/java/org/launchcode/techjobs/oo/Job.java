@@ -115,12 +115,9 @@ public class Job {
             s += "Core Competency: " + coreCompetency + "\n";
 
         }
-        s += "\n";
+
         return s;
     }
-
-
-
 
 
     @Override
@@ -133,6 +130,6 @@ public class Job {
 
     @Override
     public int hashCode() {
-        return Objects.hash(employer, positionType, coreCompetency);
+        return Objects.hash(id);
     }
 }

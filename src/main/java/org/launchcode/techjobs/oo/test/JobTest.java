@@ -81,25 +81,24 @@ public class JobTest {
     }
     @Test
     public void testToStringHandlesEmptyField(){
-        Job job1 = new Job("", new Employer(""), new Location(""),new PositionType("")
+        Job job1 = new Job("", new Employer(""), new Location(""), new PositionType("")
                 , new CoreCompetency(""));
-       // assertTrue(job1.toString().contains("ID: 1"));
-        assertTrue(job1.toString().contains("Name: Data not available"));
-        assertTrue(job1.toString().contains("Employer: Data not available"));
-        assertTrue(job1.toString().contains("Location: Data not available"));
-        assertTrue(job1.toString().contains("Position Type: Data not available"));
-        assertTrue(job1.toString().contains("Core Competency: Data not available"));
+        String expected = "\nID: 1\n" +
+                "Name: Data not available\n" +
+                "Employer: Data not available\n" +
+                "Location: Data not available\n" +
+                "Position Type: Data not available\n" +
+                "Core Competency: Data not available\n";
+        assertEquals(expected,job1.toString());
         Job job2 = new Job(null, null, null ,null
                 ,null);
-       // assertTrue(job2.toString().contains("ID: 2"));
-        assertTrue(job2.toString().contains("Name: Data not available"));
-        assertTrue(job2.toString().contains("Employer: Data not available"));
-        assertTrue(job2.toString().contains("Location: Data not available"));
-        assertTrue(job2.toString().contains("Position Type: Data not available"));
-        assertTrue(job2.toString().contains("Core Competency: Data not available"));
-
-
-
+        String expected2 = "\nID: 2\n" +
+                "Name: Data not available\n" +
+                "Employer: Data not available\n" +
+                "Location: Data not available\n" +
+                "Position Type: Data not available\n" +
+                "Core Competency: Data not available\n";
+        assertEquals(expected2,job2.toString());
 
     }
 
